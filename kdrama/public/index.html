@@ -145,5 +145,13 @@
   <footer>
     <p>&copy; 2026 KDrama. All rights reserved.</p>
   </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('Service worker registered'))
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
 </body>
 </html>
